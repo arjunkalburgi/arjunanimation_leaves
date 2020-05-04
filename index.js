@@ -1,4 +1,5 @@
 const containers = document.getElementsByClassName('animation_leaves');
+addStyle();
 for (let item of containers) {
     item.className += " BackgroundAnimation";
     createAnimations(item);
@@ -20,6 +21,44 @@ function createAnimation(container) {
 
 	// append icon 
 	container.append(icon);
+  }
+}
+
+function addStyle() {
+  var head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+
+  head.appendChild(style);
+  style.type = 'text/css';
+
+  const css = `
+	.BackgroundAnimation {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    z-index: -1;
+	    overflow: hidden;
+	    pointer-events: none;
+	}
+
+	.BackgroundAnimation_icon {
+	    position: absolute;
+            pointer-events: none;
+            z-index: -1;
+            width: 35px;
+            height: 35px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+	}
+  `;
+
+  if (style.styleSheet){
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
   }
 }
 
