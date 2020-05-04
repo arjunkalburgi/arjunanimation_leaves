@@ -1,7 +1,6 @@
 const containers = document.getElementsByClassName('animation_leaves');
 addStyle();
 for (let item of containers) {
-    item.className += " BackgroundAnimation";
     createAnimations(item);
 }
 
@@ -12,7 +11,7 @@ function createAnimation(container) {
   for (var i = 0; i < num_of_sprites; i++) {
 	// make icon element
 	var icon = document.createElement('div');
-	icon.className = "BackgroundAnimation_icon";
+	icon.className = "animation_leaves_icon";
 
 	// apply animation
 	iconPlace(icon);
@@ -32,7 +31,7 @@ function addStyle() {
   style.type = 'text/css';
 
   const css = `
-	.BackgroundAnimation {
+	.animation_leaves {
 	    position: absolute;
 	    top: 0;
 	    left: 0;
@@ -43,7 +42,7 @@ function addStyle() {
 	    pointer-events: none;
 	}
 
-	.BackgroundAnimation_icon {
+	.animation_leaves_icon {
 	    position: absolute;
             pointer-events: none;
             z-index: -1;

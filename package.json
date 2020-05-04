@@ -1,0 +1,28 @@
+{
+  "name": "animation_leaves",
+  "version": "0.0.1",
+  "description": "Floating leaves animation library ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arjunkalburgi/animation_leaves.git"
+  },
+  "keywords": [
+    "animation",
+    "floating",
+    "swaying",
+    "leaves"
+  ],
+  "author": "Arjun Kalburgi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arjunkalburgi/animation_leaves/issues"
+  },
+  "homepage": "https://github.com/arjunkalburgi/animation_leaves#readme",
+  "dependencies": {
+    "gsap": "^3.2.6"
+  }
+}
