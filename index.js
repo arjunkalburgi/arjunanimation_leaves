@@ -54,7 +54,7 @@ function addStyle() {
       background-repeat: no-repeat;
       opacity: 0.5;
 
-      background-image: url(../default/element01.svg)
+      background-image: url(element01.svg)
 	}
   `;
 
