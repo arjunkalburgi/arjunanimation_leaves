@@ -1,25 +1,27 @@
 const containers = document.getElementsByClassName('animation_leaves');
 addStyle();
 for (let item of containers) {
-    createAnimations(item);
+  createAnimations(item);
 }
 
-function createAnimation(container) {
+function createAnimations(container) {
   const num_of_sprites = parseInt(container.getAttribute('data-number'));
-  var w = container.innerWidth(), h = container.innerHeight();
+  if (isNaN(num_of_sprites)) { console.log("animation_leaves - Please set 'data-number' attribute to container.") }
+  var w = container.offsetWidth, h = container.offsetHeight;
 
   for (var i = 0; i < num_of_sprites; i++) {
-	// make icon element
-	var icon = document.createElement('div');
-	icon.className = "animation_leaves_icon";
+    // make icon element
+    var icon = document.createElement('div');
+    icon.className = "animation_leaves_icon";
 
-	// apply animation
-	iconPlace(icon);
-	iconRotate(icon);
-	iconSway(icon);
 
-	// append icon 
-	container.append(icon);
+    // apply animation
+    iconPlace(icon, w, h);
+    iconRotate(icon);
+    iconSway(icon);
+
+    // append icon 
+    container.append(icon);
   }
 }
 
@@ -32,7 +34,7 @@ function addStyle() {
 
   const css = `
 	.animation_leaves {
-	    position: absolute;
+	    position: relative;
 	    top: 0;
 	    left: 0;
 	    bottom: 0;
@@ -44,13 +46,15 @@ function addStyle() {
 
 	.animation_leaves_icon {
 	    position: absolute;
-            pointer-events: none;
-            z-index: -1;
-            width: 35px;
-            height: 35px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            opacity: 0.5;
+      pointer-events: none;
+      z-index: -1;
+      width: 35px;
+      height: 35px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.5;
+
+      background-image: url(../default/element01.svg)
 	}
   `;
 
@@ -77,7 +81,7 @@ for (var i = 0; i < total; i++) {
 
 function R(min, max) { return min + (Math.floor(10 * Math.random() * (max - min)) / 10) };
 function S() { return Math.random() < 0.5 ? -1 : 1 };
-function iconPlace(icon) {
+function iconPlace(icon, w, h) {
     // place icon 
     TweenLite.set(icon, { x: R(0, w), y: R(0, h), z: R(-200, 200) });
 }
