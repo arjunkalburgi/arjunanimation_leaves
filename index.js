@@ -1,15 +1,12 @@
 // https://github.com/umdjs/umd/blob/master/templates/commonjsStrictGlobal.js
 (function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
+  if (typeof define === 'function' && define.amd) { // AMD. Register as an anonymous module. (npm)
     define(['exports', 'gsap'], function (exports, gsap) {
       factory((root.arjunanimation_leaves = exports), gsap);
     });
-  } else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
-    // CommonJS
+  } else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') { // CommonJS (NodeJS)
     factory(exports, require('gsap'));
-  } else {
-    // Browser globals
+  } else { // Browser globals (static)
     factory((root.arjunanimation_leaves = {}), root.gsap);
   }
 }(typeof self !== 'undefined' ? self : this, function (exports, gsap) {
@@ -76,12 +73,10 @@
   function R(min, max) { return min + (Math.floor(10 * Math.random() * (max - min)) / 10) };
   function S() { return Math.random() < 0.5 ? -1 : 1 };
   function iconPlace(icon, w, h) {
-    // place icon 
-    TweenLite.set(icon, { x: R(0, w), y: R(0, h), z: R(-200, 200) });
+    gsap.set(icon, { x: R(0, w), y: R(0, h), z: R(-200, 200) });
   }
   function iconRotate(icon) {
-    // make icon rotate 
-    TweenMax.to(icon, R(2, 5), {
+    gsap.to(icon, R(2, 5), {
       rotationX: 180 * S(),
       rotationY: 180 * S(),
       repeat: 1,
@@ -93,8 +88,7 @@
     });
   }
   function iconSway(icon) {
-    // make icon sway 
-    TweenMax.to(icon, R(2, 8), {
+    gsap.to(icon, R(2, 8), {
       x: '+=' + R(-100, 100),
       y: '+=' + R(-100, 100),
       rotationZ: R(0, 180),
@@ -110,7 +104,7 @@
   
   exports.animate = function () {
 
-    const containers = document.getElementsByClassName('animation_leaves');
+    const containers = document.getElementsByClassName('arjunanimation_leaves');
     addStyle();
     for (let item of containers) {
       createAnimations(item);
