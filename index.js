@@ -13,13 +13,13 @@
   
   function createAnimations(container) {
     const num_of_sprites = parseInt(container.getAttribute('data-number'));
-    if (isNaN(num_of_sprites)) { console.log("animation_leaves - Please set 'data-number' attribute to container.") }
+    if (isNaN(num_of_sprites)) { console.log("arjunanimation_leaves - Please set 'data-number' attribute to container.") }
     var w = container.offsetWidth, h = container.offsetHeight;
     
     for (var i = 0; i < num_of_sprites; i++) {
       // make icon element
       var icon = document.createElement('div');
-      icon.className = "animation_leaves_icon";
+      icon.className = "arjunanimation_leaves_icon";
       
       
       // apply animation
@@ -39,7 +39,7 @@
     style.type = 'text/css';
     
     const css = `
-    .animation_leaves {
+    .arjunanimation_leaves {
       position: relative;
       top: 0;
       left: 0;
@@ -50,7 +50,7 @@
       pointer-events: none;
     }
     
-    .animation_leaves_icon {
+    .arjunanimation_leaves_icon {
       position: absolute;
       pointer-events: none;
       z-index: -1;
