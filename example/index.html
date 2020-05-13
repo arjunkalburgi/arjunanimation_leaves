@@ -19,13 +19,16 @@
 	</head>
 	<body>
 		<section></section>
-		<section class="arjunanimation_leaves" data-number="30"></section>
+		<section class="arjunanimation_leaves"></section>
 		<section></section>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 		<script src="../index.js"></script>
 		<script>
-			arjunanimation_leaves.animate();
+			arjunanimation_leaves.animate({
+				className: 'arjunanimation_leaves', 
+				num_of_sprites: 30,
+			});
 		</script>
 	</body>
 </html>

@@ -11,9 +11,7 @@
   }
 }(typeof self !== 'undefined' ? self : this, function (exports, gsap) {
   
-  function createAnimations(container) {
-    const num_of_sprites = parseInt(container.getAttribute('data-number'));
-    if (isNaN(num_of_sprites)) { console.log("arjunanimation_leaves - Please set 'data-number' attribute to container.") }
+  function createAnimations(container, num_of_sprites) {
     var w = container.offsetWidth, h = container.offsetHeight;
     
     for (var i = 0; i < num_of_sprites; i++) {
@@ -102,12 +100,13 @@
   }
   
   
-  exports.animate = function () {
+  exports.animate = function (arjunanimation_data) {
 
-    const containers = document.getElementsByClassName('arjunanimation_leaves');
+    if (isNaN(arjunanimation_data.num_of_sprites)) { console.log("arjunanimation_leaves - Please set 'data-number' attribute to container.") }
+    const containers = document.getElementsByClassName(arjunanimation_data.className ? arjunanimation_data.className : 'arjunanimation_leaves');
     addStyle();
     for (let item of containers) {
-      createAnimations(item);
+      createAnimations(item, arjunanimation_data.num_of_sprites);
     }
 
   };
