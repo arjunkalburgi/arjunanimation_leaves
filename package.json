@@ -1,5 +1,5 @@
 {
-  "name": "animation_leaves",
+  "name": "arjunanimation_leaves",
   "version": "0.0.1",
   "description": "Floating leaves animation library ",
   "main": "index.js",
@@ -17,7 +17,7 @@
     "leaves"
   ],
   "author": "Arjun Kalburgi",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/arjunkalburgi/animation_leaves/issues"
   },

@@ -1,17 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <section></section>
+		<section class="arjunanimation_leaves"></section>
+		<section></section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import {animate} from 'arjunanimation_leaves';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      animationData: {
+      className: 'arjunanimation_leaves', 
+      numOfSprites: 30,
+      pathsOfSprites: [
+        'assets/elements/element01.svg',
+        'assets/elements/element02.svg',
+        'assets/elements/element03.svg',
+        'assets/elements/element04.svg',
+        'assets/elements/element05.svg',
+        'assets/elements/element06.svg',
+        'assets/elements/element07.svg',
+        'assets/elements/element08.svg',
+      ]
+    }
+    }
+  },
+  mounted() {
+    animate(this.animationData);
   }
 }
 </script>
@@ -24,5 +43,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+section {
+  width: 100%;
+  height: 30vh;
 }
 </style>
