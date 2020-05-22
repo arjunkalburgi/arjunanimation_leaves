@@ -14,19 +14,19 @@ export default {
   data() {
     return {
       animationData: {
-      className: 'arjunanimation_leaves', 
-      numOfSprites: 30,
-      pathsOfSprites: [
-        require('./assets/elements/element01.svg'),
-        require('./assets/elements/element02.svg'),
-        require('./assets/elements/element03.svg'),
-        require('./assets/elements/element04.svg'),
-        require('./assets/elements/element05.svg'),
-        require('./assets/elements/element06.svg'),
-        require('./assets/elements/element07.svg'),
-        require('./assets/elements/element08.svg'),
-      ]
-    }
+        className: 'arjunanimation_leaves', 
+        numOfSprites: 30,
+        pathsOfSprites: [
+          require('./assets/elements/element01.svg'),
+          require('./assets/elements/element02.svg'),
+          require('./assets/elements/element03.svg'),
+          require('./assets/elements/element04.svg'),
+          require('./assets/elements/element05.svg'),
+          require('./assets/elements/element06.svg'),
+          require('./assets/elements/element07.svg'),
+          require('./assets/elements/element08.svg'),
+        ]
+      }
     }
   },
   mounted() {
