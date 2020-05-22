@@ -17,14 +17,14 @@ export default {
       className: 'arjunanimation_leaves', 
       numOfSprites: 30,
       pathsOfSprites: [
-        'assets/elements/element01.svg',
-        'assets/elements/element02.svg',
-        'assets/elements/element03.svg',
-        'assets/elements/element04.svg',
-        'assets/elements/element05.svg',
-        'assets/elements/element06.svg',
-        'assets/elements/element07.svg',
-        'assets/elements/element08.svg',
+        require('./assets/elements/element01.svg'),
+        require('./assets/elements/element02.svg'),
+        require('./assets/elements/element03.svg'),
+        require('./assets/elements/element04.svg'),
+        require('./assets/elements/element05.svg'),
+        require('./assets/elements/element06.svg'),
+        require('./assets/elements/element07.svg'),
+        require('./assets/elements/element08.svg'),
       ]
     }
     }
