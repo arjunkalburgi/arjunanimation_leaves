@@ -1,29 +1,41 @@
-# vue
+```javascript 
+<script>
+import {animate} from 'arjunanimation_leaves';
 
-## Project setup
-```
-npm install
+export default {
+  name: 'App',
+  data() {
+    return {
+      animationData: {
+        className: 'arjunanimation_leaves', 
+        numOfSprites: 30,
+        pathsOfSprites: [
+          require('./assets/elements/element01.svg'),
+          require('./assets/elements/element02.svg'),
+          require('./assets/elements/element03.svg'),
+          require('./assets/elements/element04.svg'),
+          require('./assets/elements/element05.svg'),
+          require('./assets/elements/element06.svg'),
+          require('./assets/elements/element07.svg'),
+          require('./assets/elements/element08.svg'),
+        ]
+      }
+    }
+  },
+  mounted() {
+    animate(this.animationData);
+  }
+}
+</script>
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![Leaves animation](../leavesgif.gif)
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
+## Test it locally
+```bash
+$ git clone https://github.com/arjunkalburgi/arjunanimation_leaves.git
+$ cd arjunanimation_leaves/examples/vue
+$ npm i
+$ npm run serve
 ```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

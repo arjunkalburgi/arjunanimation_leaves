@@ -2,6 +2,8 @@
 
 `arjunanimation_leaves` is an easy-to-use, light-weight JS animation library that adds floating, leaf-like animations to your website.
 
+![Leaves animation](./examples/leavesgif.gif)
+
 ```js
 arjunanimation_leaves.animate({
     // identify the class name of the element you want the animaiton to appear within
@@ -44,7 +46,7 @@ See [static example](./examples/static) for the working example.
 </script>
 ```
 
-### Using AMD (npm, yarn, etc)
+### Module System
 
 See [vue example](./examples/vue) for the working example.
 

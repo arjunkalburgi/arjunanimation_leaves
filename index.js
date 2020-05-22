@@ -1,6 +1,6 @@
 // https://github.com/umdjs/umd/blob/master/templates/commonjsStrictGlobal.js
 (function (root, factory) {
-  if (typeof define === 'function' && define.amd) { // AMD. Register as an anonymous module. (npm)
+  if (typeof define === 'function' && define.amd) { // as an anonymous module. (npm)
     define(['exports', 'gsap'], function (exports, gsap) {
       factory((root.arjunanimation_leaves = exports), gsap);
     });
