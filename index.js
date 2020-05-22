@@ -69,31 +69,31 @@
     }
   }
   function R(min, max) { return min + (Math.floor(10 * Math.random() * (max - min)) / 10) };
-  function R2(min, max) { const x = Math.floor(Math.random() * (max - min) + min); console.log(x); return x; };
+  function R2(min, max) { return Math.floor(Math.random() * (max - min) + min); };
   function S() { return Math.random() < 0.5 ? -1 : 1 };
   function iconPlace(icon, w, h) {
-    gsap.set(icon, { x: R(0, w), y: R(0, h), z: R(-200, 200) });
+    gsap.gsap.set(icon, { x: R(0, w), y: R(0, h), z: R(-200, 200) });
   }
   function iconRotate(icon) {
-    gsap.to(icon, R(2, 5), {
+    gsap.gsap.to(icon, R(2, 5), {
       rotationX: 180 * S(),
       rotationY: 180 * S(),
       repeat: 1,
       yoyo: true,
-      ease: Sine.easeInOut,
+      ease: gsap.Sine.easeInOut,
       onComplete() {
         iconRotate(icon);
       }
     });
   }
   function iconSway(icon) {
-    gsap.to(icon, R(2, 8), {
+    gsap.gsap.to(icon, R(2, 8), {
       x: '+=' + R(-100, 100),
       y: '+=' + R(-100, 100),
       rotationZ: R(0, 180),
       repeat: 0,
       yoyo: false,
-      ease: Sine.easeInOut,
+      ease: gsap.Sine.easeInOut,
       onComplete() {
         iconSway(icon);
       }
