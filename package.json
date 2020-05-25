@@ -1,5 +1,5 @@
 {
-  "name": "arjunanimation_leaves",
+  "name": "@arjunanimations/leaves",
   "version": "0.0.3",
   "description": "Floating leaves animation library ",
   "main": "index.js",
@@ -24,5 +24,8 @@
   "homepage": "https://github.com/arjunkalburgi/animation_leaves#readme",
   "dependencies": {
     "gsap": "^3.2.6"
+  },
+  "directories": {
+    "example": "examples"
   }
 }

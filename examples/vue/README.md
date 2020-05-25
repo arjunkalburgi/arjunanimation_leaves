@@ -1,6 +1,6 @@
 ```javascript 
 <script>
-import {animate} from 'arjunanimation_leaves';
+import {animate} from '@arjunanimation/leaves';
 
 export default {
   name: 'App',

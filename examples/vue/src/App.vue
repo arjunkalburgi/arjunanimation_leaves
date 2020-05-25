@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import {animate} from 'arjunanimation_leaves';
+import {animate} from '@arjunanimations/leaves';
 
 export default {
   name: 'App',

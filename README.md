@@ -1,6 +1,6 @@
 # ArjunAnimation: Leaves
 
-`arjunanimation_leaves` is an easy-to-use, light-weight JS animation library that adds floating, leaf-like animations to your website.
+`@arjunanimation/leaves` is an easy-to-use, light-weight JS animation library that adds floating, leaf-like animations to your website.
 
 ![Leaves animation](./examples/leavesgif.gif)
 
@@ -35,7 +35,7 @@ See [static example](./examples/static) for the working example.
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-<script src="https://unpkg.com/arjunanimation_leaves@0.0.3/index.js"></script>
+<script src="https://unpkg.com/@arjunanimations/leaves@0.0.3/index.js"></script>
 <script>
     arjunanimation_leaves.animate({
         // see above example for details
@@ -51,13 +51,13 @@ See [static example](./examples/static) for the working example.
 See [vue example](./examples/vue) for the working example.
 
 ```bash
-$ npm install arjunanimation_leaves --save
+$ npm install @arjunanimation/leaves --save
 ```
 
 ```javascript 
 // put these in your component
 
-import {animate} from 'arjunanimation_leaves';
+import {animate} from '@arjunanimation/leaves';
 
 const animationData = {
     // see above example for details
