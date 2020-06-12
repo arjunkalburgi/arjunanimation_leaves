@@ -7,7 +7,8 @@
 </template>
 
 <script>
-import {animate} from '@arjunanimations/leaves';
+// import {animate} from '@arjunanimations/leaves';
+import {animate} from '../../../index.js';
 
 export default {
   name: 'App',
@@ -25,8 +26,11 @@ export default {
           require('./assets/elements/element06.svg'),
           require('./assets/elements/element07.svg'),
           require('./assets/elements/element08.svg'),
-        ]
-      }
+        ],
+        // noSway: true,
+				// noRotation: true,
+				// noSpin: true,
+  }
     }
   },
   mounted() {

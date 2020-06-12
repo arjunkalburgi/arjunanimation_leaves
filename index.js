@@ -15,19 +15,20 @@
     gsap = gsap.gsap;
   }
   
-  function createAnimations(container, numOfSprites, sprites) {
+  function createAnimations(container, data) {
     var w = container.offsetWidth, h = container.offsetHeight;
     
-    for (var i = 0; i < numOfSprites; i++) {
+    for (var i = 0; i < data.numOfSprites; i++) {
       // make icon element
       var icon = document.createElement('div');
       icon.className = "arjunanimation_leaves_icon";
-      icon.style.backgroundImage = `url(${sprites[R2(0, sprites.length)]})`
+      icon.style.backgroundImage = `url(${data.pathsOfSprites[R2(0, data.pathsOfSprites.length)]})`
       
       // apply animation
       iconPlace(icon, w, h);
-      iconRotate(icon);
-      iconSway(icon);
+      if (data.noRotation == null || !data.noRotation) { iconRotate(icon); }
+      if (data.noSway == null || !data.noSway) { iconSway(icon); }
+      if (data.noSpin == null || !data.noSpin) { iconSpin(icon); }
       
       // append icon 
       container.append(icon);
@@ -94,12 +95,22 @@
     gsap.to(icon, R(2, 8), {
       x: '+=' + R(-100, 100),
       y: '+=' + R(-100, 100),
-      rotationZ: R(0, 180),
       repeat: 0,
       yoyo: false,
       ease: Sine.easeInOut,
       onComplete() {
         iconSway(icon);
+      }
+    });
+  }
+  function iconSpin(icon) {
+    gsap.to(icon, R(2, 8), {
+      rotationZ: R(0, 180),
+      repeat: 0,
+      yoyo: false,
+      ease: Sine.easeInOut,
+      onComplete() {
+        iconSpin(icon);
       }
     });
   }
@@ -111,7 +122,7 @@
     const containers = document.getElementsByClassName(arjunanimationData.className ? arjunanimationData.className : 'arjunanimation_leaves');
     addStyle();
     for (let item of containers) {
-      createAnimations(item, arjunanimationData.numOfSprites, arjunanimationData.pathsOfSprites);
+      createAnimations(item, arjunanimationData);
     }
 
   };

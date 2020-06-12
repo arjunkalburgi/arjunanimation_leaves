@@ -23,7 +23,16 @@ arjunanimation_leaves.animate({
         'element06.svg',
         'element07.svg',
         'element08.svg',
-    ]
+    ],
+
+    // turn off movement - optional
+    noSway: true,
+
+    // turn off spinning - optional
+    noSpin: true,
+
+    // turn off rotation - optional
+    noRotation: true,
 });
 ```
 
@@ -35,13 +44,17 @@ See [static example](./examples/static) for the working example.
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-<script src="https://unpkg.com/@arjunanimations/leaves@0.0.3/index.js"></script>
+<script src="https://unpkg.com/@arjunanimations/leaves@0.0.4/index.js"></script>
 <script>
     arjunanimation_leaves.animate({
         // see above example for details
         className: '...', 
         numOfSprites: ...,
         pathsOfSprites: [...]
+        // optional 
+        noSway: true,
+        noSpin: true,
+        noRotation: true,
     });
 </script>
 ```
@@ -64,6 +77,10 @@ const animationData = {
     className: '...', 
     numOfSprites: ...,
     pathsOfSprites: [...]
+    // optional 
+    noSway: true,
+    noSpin: true,
+    noRotation: true,
 }
 
 animate(this.animationData);

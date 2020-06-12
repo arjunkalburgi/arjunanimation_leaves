@@ -18,7 +18,11 @@ export default {
           require('./assets/elements/element06.svg'),
           require('./assets/elements/element07.svg'),
           require('./assets/elements/element08.svg'),
-        ]
+        ],
+        // optional 
+        noSway: true,
+        noSpin: true,
+        noRotation: true,
       }
     }
   },
