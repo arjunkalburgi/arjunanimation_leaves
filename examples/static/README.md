@@ -5,7 +5,7 @@
     <section></section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-    <script src="https://unpkg.com/@arjunanimations/leaves@0.0.4/index.js"></script>
+    <script src="https://unpkg.com/@arjunanimations/leaves"></script>
     <script>
         arjunanimation_leaves.animate({
             className: 'arjunanimation_leaves', 

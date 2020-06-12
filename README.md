@@ -44,7 +44,7 @@ See [static example](./examples/static) for the working example.
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-<script src="https://unpkg.com/@arjunanimations/leaves@0.0.4/index.js"></script>
+<script src="https://unpkg.com/@arjunanimations/leaves"></script>
 <script>
     arjunanimation_leaves.animate({
         // see above example for details
