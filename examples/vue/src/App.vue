@@ -30,8 +30,8 @@ export default {
         // noSway: true,
 				// noRotation: true,
         // noSpin: true,
-        // height: 35, 
-        // width: 35,
+        // height: 105, 
+        // width: 105,
   }
     }
   },

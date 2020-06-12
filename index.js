@@ -120,7 +120,7 @@
 
     if (isNaN(arjunanimationData.numOfSprites)) { console.log("arjunanimation_leaves - Please set 'data-number' attribute to container.") }
     const containers = document.getElementsByClassName(arjunanimationData.className ? arjunanimationData.className : 'arjunanimation_leaves');
-    addStyle(data.width, data.height);
+    addStyle(arjunanimationData.width, arjunanimationData.height);
     for (let item of containers) {
       createAnimations(item, arjunanimationData);
     }
