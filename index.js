@@ -34,7 +34,7 @@
       container.append(icon);
     }
   }
-  function addStyle() {
+  function addStyle(w, h) {
     var head = document.head || document.getElementsByTagName('head')[0],
     style = document.createElement('style');
     
@@ -57,8 +57,8 @@
       position: absolute;
       pointer-events: none;
       z-index: -1;
-      width: 35px;
-      height: 35px;
+      width: ${(w != null) ? w : '35'}px;
+      height: ${(h != null) ? h : '35'}px;
       background-size: contain;
       background-repeat: no-repeat;
       opacity: 0.5;
@@ -120,7 +120,7 @@
 
     if (isNaN(arjunanimationData.numOfSprites)) { console.log("arjunanimation_leaves - Please set 'data-number' attribute to container.") }
     const containers = document.getElementsByClassName(arjunanimationData.className ? arjunanimationData.className : 'arjunanimation_leaves');
-    addStyle();
+    addStyle(data.width, data.height);
     for (let item of containers) {
       createAnimations(item, arjunanimationData);
     }

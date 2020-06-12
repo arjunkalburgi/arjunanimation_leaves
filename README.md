@@ -8,12 +8,15 @@
 arjunanimation_leaves.animate({
     // identify the class name of the element you want the animaiton to appear within
     //      the leaves will not show outside this container
+    // -- string
     className: 'arjunanimation_leaves', 
 
     // identify the number of sprites you would like to appear within the container
+    // -- int
     numOfSprites: 30,
 
     // define the sprites using an array of paths
+    // -- array of strings
     pathsOfSprites: [
         'element01.svg',
         'element02.svg',
@@ -25,14 +28,25 @@ arjunanimation_leaves.animate({
         'element08.svg',
     ],
 
-    // turn off movement - optional
+    // turn off movement
+    // -- boolean or null (optional)
     noSway: true,
 
-    // turn off spinning - optional
+    // turn off spinning
+    // -- boolean or null (optional)
     noSpin: true,
 
-    // turn off rotation - optional
+    // turn off rotation
+    // -- boolean or null (optional)
     noRotation: true,
+
+    // set sprite height in pixels
+    // -- int or null (optional - default: 35px)
+    height: 35,
+
+    // set sprite width in pixels
+    // -- int or null (optional - default: 35px)
+    width: 35,
 });
 ```
 
@@ -55,6 +69,8 @@ See [static example](./examples/static) for the working example.
         noSway: true,
         noSpin: true,
         noRotation: true,
+        height: ...,
+        width: ...,
     });
 </script>
 ```
@@ -81,6 +97,8 @@ const animationData = {
     noSway: true,
     noSpin: true,
     noRotation: true,
+    height: ...,
+    width: ...,
 }
 
 animate(this.animationData);

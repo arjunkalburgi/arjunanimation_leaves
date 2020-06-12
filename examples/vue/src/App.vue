@@ -29,7 +29,9 @@ export default {
         ],
         // noSway: true,
 				// noRotation: true,
-				// noSpin: true,
+        // noSpin: true,
+        // height: 35, 
+        // width: 35,
   }
     }
   },

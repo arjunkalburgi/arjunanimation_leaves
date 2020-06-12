@@ -23,6 +23,8 @@ export default {
         noSway: true,
         noSpin: true,
         noRotation: true,
+        height: 35,
+        width: 35,
       }
     }
   },

@@ -24,6 +24,8 @@
             noSway: true,
             noSpin: true,
             noRotation: true,
+            width: 35, 
+            height: 35
         });
     </script>
 </body>
