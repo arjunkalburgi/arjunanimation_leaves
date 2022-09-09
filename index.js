@@ -10,6 +10,8 @@
     factory((root.arjunanimation_leaves = {}), root.gsap);
   }
 }(typeof self !== 'undefined' ? self : this, function (exports, gsap) {
+
+  let Sine;
   if (gsap.gsap) { // for module system
     Sine = gsap.Sine;
     gsap = gsap.gsap;
@@ -85,7 +87,7 @@
       rotationY: 180 * S(),
       repeat: 1,
       yoyo: true,
-      ease: Sine.easeInOut,
+      ease: gsap.Sine.easeInOut,
       onComplete() {
         iconRotate(icon);
       }
@@ -97,7 +99,7 @@
       y: '+=' + R(-100, 100),
       repeat: 0,
       yoyo: false,
-      ease: Sine.easeInOut,
+      ease: gsap.Sine.easeInOut,
       onComplete() {
         iconSway(icon);
       }
@@ -108,7 +110,7 @@
       rotationZ: R(0, 180),
       repeat: 0,
       yoyo: false,
-      ease: Sine.easeInOut,
+      ease: gsap.Sine.easeInOut,
       onComplete() {
         iconSpin(icon);
       }
