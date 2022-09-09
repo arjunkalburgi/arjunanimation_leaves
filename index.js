@@ -16,33 +16,33 @@
     Sine = gsap.Sine;
     gsap = gsap.gsap;
   }
-  
+
   function createAnimations(container, data) {
     var w = container.offsetWidth, h = container.offsetHeight;
-    
+
     for (var i = 0; i < data.numOfSprites; i++) {
       // make icon element
       var icon = document.createElement('div');
       icon.className = "arjunanimation_leaves_icon";
       icon.style.backgroundImage = `url(${data.pathsOfSprites[R2(0, data.pathsOfSprites.length)]})`
-      
+
       // apply animation
       iconPlace(icon, w, h);
       if (data.noRotation == null || !data.noRotation) { iconRotate(icon); }
       if (data.noSway == null || !data.noSway) { iconSway(icon); }
       if (data.noSpin == null || !data.noSpin) { iconSpin(icon); }
-      
+
       // append icon 
       container.append(icon);
     }
   }
   function addStyle(w, h) {
     var head = document.head || document.getElementsByTagName('head')[0],
-    style = document.createElement('style');
-    
+      style = document.createElement('style');
+
     head.appendChild(style);
     style.type = 'text/css';
-    
+
     const css = `
     .arjunanimation_leaves {
       position: relative;
@@ -68,7 +68,7 @@
       background-image: url(element01.svg)
     }
     `;
-    
+
     if (style.styleSheet) {
       style.styleSheet.cssText = css;
     } else {
@@ -87,7 +87,7 @@
       rotationY: 180 * S(),
       repeat: 1,
       yoyo: true,
-      ease: gsap.Sine.easeInOut,
+      ease: Sine.easeInOut,
       onComplete() {
         iconRotate(icon);
       }
@@ -99,7 +99,7 @@
       y: '+=' + R(-100, 100),
       repeat: 0,
       yoyo: false,
-      ease: gsap.Sine.easeInOut,
+      ease: Sine.easeInOut,
       onComplete() {
         iconSway(icon);
       }
@@ -110,14 +110,14 @@
       rotationZ: R(0, 180),
       repeat: 0,
       yoyo: false,
-      ease: gsap.Sine.easeInOut,
+      ease: Sine.easeInOut,
       onComplete() {
         iconSpin(icon);
       }
     });
   }
-  
-  
+
+
   exports.animate = function (arjunanimationData) {
 
     if (isNaN(arjunanimationData.numOfSprites)) { console.log("arjunanimation_leaves - Please set 'data-number' attribute to container.") }
