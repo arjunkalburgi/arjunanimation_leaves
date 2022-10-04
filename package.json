@@ -1,6 +1,6 @@
 {
   "name": "@arjunanimations/leaves",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Floating leaves animation library ",
   "main": "index.js",
   "scripts": {

@@ -11,7 +11,7 @@
   }
 }(typeof self !== 'undefined' ? self : this, function (exports, gsap) {
 
-  let Sine;
+  let Sine = {};
   if (gsap.gsap) { // for module system
     Sine = gsap.Sine;
     gsap = gsap.gsap;
@@ -36,7 +36,7 @@
       container.append(icon);
     }
   }
-  function addStyle(w, h) {
+  function addStyle(className, w, h) {
     var head = document.head || document.getElementsByTagName('head')[0],
       style = document.createElement('style');
 
@@ -44,7 +44,7 @@
     style.type = 'text/css';
 
     const css = `
-    .arjunanimation_leaves {
+    .${className} {
       position: relative;
       top: 0;
       left: 0;
@@ -55,7 +55,7 @@
       pointer-events: none;
     }
     
-    .arjunanimation_leaves_icon {
+    .${className} .arjunanimation_leaves_icon {
       position: absolute;
       pointer-events: none;
       z-index: -1;
@@ -122,7 +122,7 @@
 
     if (isNaN(arjunanimationData.numOfSprites)) { console.log("arjunanimation_leaves - Please set 'data-number' attribute to container.") }
     const containers = document.getElementsByClassName(arjunanimationData.className ? arjunanimationData.className : 'arjunanimation_leaves');
-    addStyle(arjunanimationData.width, arjunanimationData.height);
+    addStyle(arjunanimationData.className, arjunanimationData.width, arjunanimationData.height);
     for (let item of containers) {
       createAnimations(item, arjunanimationData);
     }
